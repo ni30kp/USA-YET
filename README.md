@@ -6,6 +6,55 @@ A production-ready **Retrieval-Augmented Generation (RAG)** system that enables 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io)
 
+## 💻 System Requirements
+
+### 🖥️ **Operating System**
+- **Windows**: 10/11 (64-bit)
+- **macOS**: 10.14+ (Intel/Apple Silicon)
+- **Linux**: Ubuntu 18.04+, CentOS 7+, or equivalent
+
+### 🐍 **Python Environment**
+- **Python**: 3.8 - 3.12 (3.13 supported but may have compatibility issues)
+- **pip**: Latest version (comes with Python)
+- **Virtual environment**: Recommended (venv, conda, or virtualenv)
+
+### 💾 **Hardware Requirements**
+
+#### **Minimum Requirements**
+- **RAM**: 4GB (8GB recommended)
+- **Storage**: 2GB free space
+- **CPU**: Any modern processor (2+ cores recommended)
+- **Internet**: Required for API calls and model downloads
+
+#### **Recommended for Better Performance**
+- **RAM**: 8GB+ (for large document collections)
+- **Storage**: 5GB+ free space (for embeddings cache)
+- **CPU**: 4+ cores (faster document processing)
+- **GPU**: Optional (CUDA-compatible for faster embeddings)
+
+### 🔑 **Required Accounts & API Keys**
+- **OpenAI API Key**: Required for GPT models
+  - Sign up at [platform.openai.com](https://platform.openai.com)
+  - Add billing information (pay-per-use)
+  - Generate API key from dashboard
+- **Git**: For cloning the repository
+- **Internet Connection**: For downloading dependencies and API calls
+
+### 📦 **Software Dependencies** (Auto-installed)
+- **Core Libraries**: LlamaIndex, OpenAI, Streamlit, FAISS
+- **ML Libraries**: Transformers, Torch, Sentence-Transformers
+- **Utilities**: Python-dotenv for environment management
+
+### 📁 **File Format Support**
+- **Documents**: PDF, TXT, DOCX, DOC
+- **Text Encoding**: UTF-8 (recommended), ASCII, Latin-1
+- **File Size**: Up to 50MB per document (configurable)
+
+### 🌐 **Network Requirements**
+- **Outbound HTTPS**: For OpenAI API calls
+- **Port Access**: 8505 (default Streamlit port, configurable)
+- **Bandwidth**: Minimal (API calls are small)
+
 ## ✨ Features
 
 ### 🔍 **Smart Document Processing**
@@ -29,14 +78,37 @@ A production-ready **Retrieval-Augmented Generation (RAG)** system that enables 
 - **One-click setup**: Automated environment configuration
 - **Session state management**: Persistent upload queue handling
 
+## 📥 Installation Guide
+
+### 🔧 **Pre-Installation Checklist**
+- [ ] Python 3.8+ installed ([Download Python](https://python.org/downloads/))
+- [ ] Git installed ([Download Git](https://git-scm.com/downloads))
+- [ ] OpenAI API key ready ([Get API Key](https://platform.openai.com/api-keys))
+- [ ] 4GB+ RAM available
+- [ ] 2GB+ free disk space
+
+### 🎯 **Step-by-Step Installation**
+
+#### **1. Clone the Repository**
+```bash
+git clone https://github.com/ni30kp/USA-YET.git
+cd USA-YET
+```
+
+#### **2. Verify Python Installation**
+```bash
+python --version  # Should show 3.8+
+pip --version      # Should show pip version
+```
+
+#### **3. Choose Installation Method**
+
 ## 🚀 Quick Start
 
 ### Option 1: Automated Setup (Recommended)
 
 ```bash
-# 1. Clone the repository
-git clone https://github.com/your-username/multi-hop-rag-assistant.git
-cd multi-hop-rag-assistant
+# After cloning the repository above:
 
 # 2. Run the setup script
 python setup.py
@@ -48,6 +120,14 @@ python setup.py
 python start.py
 ```
 
+#### **4. First-Time Setup**
+After installation, you'll need to:
+
+1. **Add Documents**: Place your PDF/TXT/DOCX files in the `data/` folder
+2. **Build Index**: Click "Rebuild Index" in the System & Debug tab
+3. **Test System**: Use the "Test Integration" button to verify everything works
+4. **Start Asking Questions**: Switch to Chat & Query tab and start chatting!
+
 ### Option 2: Manual Setup
 
 <details>
@@ -55,8 +135,8 @@ python start.py
 
 ```bash
 # 1. Clone and navigate
-git clone https://github.com/your-username/multi-hop-rag-assistant.git
-cd multi-hop-rag-assistant
+git clone https://github.com/ni30kp/USA-YET.git
+cd USA-YET
 
 # 2. Create virtual environment
 python -m venv venv
