@@ -55,9 +55,9 @@ data/*.pdf
 data/*.txt
 data/*.docx
 data/*.doc
-# Keep the directory structure and metadata
+data/document_metadata.json
+# Keep the directory structure
 !data/
-!data/document_metadata.json
 
 # Vector Storage (exclude large index files)
 storage/faiss_index/*.pkl
